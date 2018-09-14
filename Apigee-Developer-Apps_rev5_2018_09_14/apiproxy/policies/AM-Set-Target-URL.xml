@@ -2,7 +2,7 @@
 <AssignMessage name="AM-Set-Target-URL" enabled="true" continueOnError="false" async="false">
     <DisplayName>AM-Set-CommonFlow-Variables</DisplayName>
     <Properties/>
-    <Set>
+    <Set> 
         <Headers>
             <Header name="Authorization">{Facade-Creds}</Header>
             <Header name="Content-Type">application/json</Header>
