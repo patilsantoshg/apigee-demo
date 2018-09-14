@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage name="AM-Set-Target-URL" enabled="true" continueOnError="false" async="false">
+    <DisplayName>AM-Set-CommonFlow-Variables</DisplayName>
+    <Properties/>
+    <Set>
+        <Headers>
+            <Header name="Authorization">{Facade-Creds}</Header>
+            <Header name="Content-Type">application/json</Header>
+        </Headers>
+    </Set>
+    <AssignVariable>
+        <Name>target.url</Name>
+        <Value>https://api.enterprise.apigee.com/v1/o/patilgopinathv-eval/developers/f95564ac-2468-4a31-baab-10f9d1ef830c/apps</Value>
+        <Ref/>
+    </AssignVariable>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo type="request" transport="http" createNew="false"/>
+</AssignMessage>

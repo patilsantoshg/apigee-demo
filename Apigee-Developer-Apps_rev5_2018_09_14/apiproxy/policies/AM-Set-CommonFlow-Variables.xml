@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage name="AM-Set-CommonFlow-Variables" enabled="true" continueOnError="false" async="false">
+    <DisplayName>AM-Set-Target-Request</DisplayName>
+    <Properties/>
+    <AssignVariable>
+        <Name>isVerifyApiKeyAuthenticationNeeded</Name>
+        <Value>true</Value>
+        <Ref/>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>target.url</Name>
+        <Value>https://api.enterprise.apigee.com/v1/o/patilgopinathv-eval/developers/{developerId}/apps</Value>
+        <Ref/>
+    </AssignVariable>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo type="request" transport="http" createNew="false"/>
+</AssignMessage>

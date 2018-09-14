@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="EV-ExtractDeveloperId">
+    <DisplayName>EV-ExtractDeveloperId</DisplayName>
+    <Properties/>
+    <URIPath name="developerId">
+        <Pattern>**/sharedservices/v1/developers/{developerId}</Pattern>
+    </URIPath>
+    <Source clearPayload="false">request</Source>
+    <VariablePrefix>facade</VariablePrefix>
+</ExtractVariables>

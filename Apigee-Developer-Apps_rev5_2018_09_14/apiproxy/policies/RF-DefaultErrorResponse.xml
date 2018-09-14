@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RaiseFault async="false" continueOnError="false" enabled="true" name="RF-DefaultErrorResponse">
+    <DisplayName>RF-DefaultErrorResponse</DisplayName>
+    <FaultResponse>
+        <Set>
+            <Headers>
+                <Header name="Content-Type">application/json</Header>
+                <Header name="Access-Control-Allow-Origin">*</Header>
+            </Headers>
+            <!--<Payload contentType="application/json" variablePrefix="@" variableSuffix="#">
+                {
+                	"errorResponse": {
+                		"code": "@flow.error.code#",
+                		"message": "@flow.error.message#",
+                		"info": "@flow.error.info#"
+                	}
+                }
+			</Payload>-->
+            <Payload contentType="application/json" variablePrefix="@" variableSuffix="#">
+                {
+                	"errorResponse": {
+                		"code": "@response.status.code#",
+                		"message": "@response.reason.phrase#",
+                		"info": @response.content#
+                	}
+                }
+			</Payload>
+            <StatusCode>{response.status.code}</StatusCode>
+            <ReasonPhrase>{response.reason.phrase}</ReasonPhrase>
+        </Set>
+    </FaultResponse>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</RaiseFault>

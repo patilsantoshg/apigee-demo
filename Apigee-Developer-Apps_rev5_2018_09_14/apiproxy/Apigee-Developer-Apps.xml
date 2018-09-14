@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="5" name="Apigee-Developer-Apps">
+    <Basepaths>/provisioning/v1</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1520070615492</CreatedAt>
+    <CreatedBy>patilgopinathv@gmail.com</CreatedBy>
+    <Description>Facade API to create developer application.
+</Description>
+    <DisplayName>Apigee-Developer-Apps</DisplayName>
+    <LastModifiedAt>1520070615492</LastModifiedAt>
+    <LastModifiedBy>patilgopinathv@gmail.com</LastModifiedBy>
+    <ManifestVersion>SHA-512:76d9dac02f5e343ed015b0809896d90f841241481b19dafc31eca8893bd9ef039f5b46707c5cdd730be6a5922320a02bbadd5f110b4c6aa0056dad1a77393864:ap-northeast-1</ManifestVersion>
+    <Policies>
+        <Policy>AM-Set-CommonFlow-Variables</Policy>
+        <Policy>AM-Set-Target-URL</Policy>
+        <Policy>EV-ExtractDeveloperId</Policy>
+        <Policy>FC-CallCommonFlow</Policy>
+        <Policy>FC-Common-Fault-Handler</Policy>
+        <Policy>RF-DefaultErrorResponse</Policy>
+        <Policy>add-cors</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources/>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>

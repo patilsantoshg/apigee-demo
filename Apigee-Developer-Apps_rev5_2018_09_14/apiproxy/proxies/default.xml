@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+    <Description/>
+    <FaultRules>
+        <FaultRule name="ApigeeFaultHandler">
+            <Step>
+                <Name>add-cors</Name>
+            </Step>
+            <Step>
+                <Name>FC-Common-Fault-Handler</Name>
+                <Condition>
+                    (fault.name Matches "InvalidApiKey") or 
+                    (fault.name Matches "FailedToResolveAPIKey") or 
+                    (fault.name Matches "invalid_access_token") or 
+                    (fault.name Matches "InvalidAccessToken") or 
+                    (fault.name Matches "app_already_exists")
+                </Condition>
+            </Step>
+            <Step>
+                <Name>add-cors</Name>
+            </Step>
+        </FaultRule>
+    </FaultRules>
+    <DefaultFaultRule name="all">
+        <AlwaysEnforce>true</AlwaysEnforce>
+        <Step>
+            <Name>RF-DefaultErrorResponse</Name>
+        </Step>
+        <Step>
+            <Name>add-cors</Name>
+        </Step>
+    </DefaultFaultRule>
+    <PreFlow name="PreFlow">
+        <Request>
+            <Step>
+                <Name>AM-Set-CommonFlow-Variables</Name>
+            </Step>
+            <Step>
+                <Name>FC-CallCommonFlow</Name>
+            </Step>
+            <Step>
+                <Name>EV-ExtractDeveloperId</Name>
+            </Step>
+        </Request>
+        <Response/>
+    </PreFlow>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response/>
+    </PostFlow>
+    <Flows>
+        <!--<Flow name="OptionsPreFlight">
+            <Request/>
+            <Response>
+                <Step>
+                    <Name>add-cors</Name>
+                </Step>
+            </Response>
+            <Condition>request.verb == "OPTIONS" AND request.header.origin != null AND request.header.Access-Control-Request-Method != null</Condition>
+        </Flow>-->
+        <Flow name="post /devApps">
+            <Description/>
+            <Request/>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/devApps") and (request.verb = "POST")</Condition>
+        </Flow>
+    </Flows>
+    <HTTPProxyConnection>
+        <BasePath>/sharedservices/v1/developers/{developerId}</BasePath>
+        <Properties/>
+        <VirtualHost>secure</VirtualHost>
+    </HTTPProxyConnection>
+    <RouteRule name="NoRoute">
+        <TargetEndpoint>default</TargetEndpoint>
+    </RouteRule>
+</ProxyEndpoint>

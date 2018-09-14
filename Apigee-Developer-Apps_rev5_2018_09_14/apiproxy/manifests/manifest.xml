@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Manifest name="manifest">
+    <Policies>
+        <VersionInfo resourceName="AM-Set-CommonFlow-Variables" version="SHA-512:fe5dc2fbf3eee809cf6150411b96ab43974e04f1994f769619696a6a595ca573e5a78078c41873116d3981a2b960d9586eae657158bf90875ebf3c5acb35ff1f"/>
+        <VersionInfo resourceName="AM-Set-Target-URL" version="SHA-512:27abe0a1ea53e18954f75fff5aeb9a56482a12cdae459c199d52924d353a5200c58937bccbb9620a798d3150689edb993ca2493b75bb002e3dad4cb093e90b18"/>
+        <VersionInfo resourceName="EV-ExtractDeveloperId" version="SHA-512:68021b247b27769bbb43122b79ea6bfde438d4689371d811ba85e2cd5ceea85717761d54658602a2ce4ff592509f75d5cf2200c2cb860c86fa5c77b2ef0b5b63"/>
+        <VersionInfo resourceName="FC-CallCommonFlow" version="SHA-512:bf90e280e4128a11ffe3ad677f69a9c34bd4ed3b7facb1bd047a5a4662eda2a870885a667a42cf1f8153f2509741e65d81d218f0897e7047f6acc97adbb0811e"/>
+        <VersionInfo resourceName="FC-Common-Fault-Handler" version="SHA-512:5da9612bf8ad6a6ce5f396cd8702ea53110f96390e1313046f0c40a38e0ebd73ecff1e39a1e9a9ae06a5cae275132b725387ab90d384d06311752ecdc531454e"/>
+        <VersionInfo resourceName="RF-DefaultErrorResponse" version="SHA-512:3a308f42949e2c8cb936acd83abda91a4359dfa7582c086ab2a6eff0056d78e6f82389ff1b10238a052951667a7e3b3696c7066c7a4db8e41f519f2c40d36971"/>
+        <VersionInfo resourceName="add-cors" version="SHA-512:67e4030225a539e1cd31ff0a93acbb8fd7c81bda916589bf250b6d140da1cde3c055bc62390e8cd4244322ef69889ff97e230ed6b063ad0c46c80717ca55afa9"/>
+    </Policies>
+    <ProxyEndpoints>
+        <VersionInfo resourceName="default" version="SHA-512:bc89ff9298337a8e630b6efb928e5b9e5f9729d432fb0e76ce18365489d388541ebb256d1a356ecdc47af2a1961779c757c013dd512e7a694e8371334735ebe6"/>
+    </ProxyEndpoints>
+    <Resources/>
+    <SharedFlows/>
+    <TargetEndpoints>
+        <VersionInfo resourceName="default" version="SHA-512:578b8984b9030a2ec27ebde0ef192436b65496451d98cace17227f591553575e7a6d1e4e248c123b7e591952e1280fd3f9cef71b517fbfb6d555ad798f28ebec"/>
+    </TargetEndpoints>
+</Manifest>
